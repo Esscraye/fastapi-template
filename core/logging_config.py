@@ -1,6 +1,3 @@
-# Configuration du logging pour l'application FastAPI
-
-import logging
 from logging.config import dictConfig
 
 LOGGING_CONFIG = {
@@ -34,6 +31,3 @@ LOGGING_CONFIG = {
 
 def setup_logging():
     dictConfig(LOGGING_CONFIG)
-
-# À appeler au démarrage de l'app (dans main.py)
-# setup_logging()

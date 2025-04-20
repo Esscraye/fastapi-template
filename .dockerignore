@@ -1,0 +1,32 @@
+# Exclude version control directories
+.git/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Logs and database
+logs/
+*.log
+*.sqlite3
+*.db
+
+# Environment files
+.env
+.env.*
+
+# Test and coverage
+.pytest_cache/
+coverage.xml
+
+# IDE and OS files
+.vscode/
+.idea/
+*.swp
+.DS_Store

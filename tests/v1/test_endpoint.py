@@ -1,9 +1,4 @@
-# Tests pour les endpoints de v1
-
 import uuid
-
-# On utilise UNIQUEMENT les fixtures du conftest.py pour éviter les conflits
-# Les fixtures locales sont supprimées
 
 def test_create_user(client, user_data):
     response = client.post("/v1/users/", json=user_data)

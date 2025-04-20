@@ -1,5 +1,3 @@
-# Fonctions et classes liées à la sécurité (authentification, gestion des tokens, etc.)
-
 from passlib.context import CryptContext
 from jose import JWTError, jwt
 from datetime import datetime, timedelta, timezone
@@ -13,7 +11,6 @@ from v1.models.user import User
 
 settings = get_settings()
 
-# Utilise argon2 au lieu de bcrypt
 pwd_context = CryptContext(schemes=["argon2"], deprecated="auto")
 
 # --- Password hashing ---

@@ -36,6 +36,14 @@ python -m scripts.create_admin admin@example.com monSuperMotDePasse
 uvicorn main:app --reload
 ```
 
+## Exécuter avec Docker
+- Prérequis : Docker
+```bash
+docker build --no-cache -t fastapi-app .
+docker run --rm -d -p 8000:8000 --env-file .env fastapi-app
+```
+L'application sera accessible à http://localhost:8000
+
 ## Documentation interactive
 - Swagger UI : http://localhost:8000/docs
 - Redoc : http://localhost:8000/redoc

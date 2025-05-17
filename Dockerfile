@@ -41,6 +41,6 @@ COPY . .
 RUN chown -R appuser:appuser /app
 USER appuser
 
-# Expose port and start app with Gunicorn & Uvicorn workers
+# Expose port and use entrypoint script
 EXPOSE 8000
-CMD ["gunicorn", "--worker-class", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:8000", "--workers", "4", "main:app"]
+ENTRYPOINT ["/app/docker/entrypoint.sh"]

@@ -1,8 +1,10 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, declarative_base
 from core.config import get_settings
 from typing import Generator
 import os
+
+Base = declarative_base()
 
 settings = get_settings()
 

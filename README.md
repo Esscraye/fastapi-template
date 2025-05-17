@@ -21,7 +21,7 @@ python -m venv venv
 source venv/bin/activate
 
 # Installer les dépendances
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 
 # Copier le fichier d'exemple d'environnement
 cp .env.example .env
@@ -37,7 +37,7 @@ uvicorn main:app --reload
 ```
 
 ## Exécuter avec Docker
-- Prérequis : Docker
+- Prérequis : Docker
 ```bash
 docker build --no-cache -t fastapi-app .
 docker run --rm -d -p 8000:8000 --env-file .env fastapi-app
@@ -86,7 +86,3 @@ alembic/        # Migrations DB
 - Ajouter des endpoints
 - Étendre la sécurité (OAuth2, permissions...)
 - Ajouter la CI/CD (GitHub Actions, ...)
-
----
-
-> Généré avec ❤️ par Cascade AI
